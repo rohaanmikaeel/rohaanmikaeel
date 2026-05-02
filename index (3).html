@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohaan Mikaeel Group Inc. | Global Auto Trade Experts</title>
+<meta name="description" content="USA-registered global vehicle exporters. New & used cars, SUVs, and heavy machinery shipped worldwide. Trusted by clients across Africa, Middle East, and Asia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --red-dark: #8B0A1E;
+    --red-light: #E8294A;
+    --black: #0A0A0A;
+    --near-black: #111111;
+    --charcoal: #1E1E1E;
+    --dark-gray: #2A2A2A;
+    --mid-gray: #555;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --cream: #FAFAF8;
+    --gold: #C9A84C;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-accent: 'Bebas Neue', cursive;
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+    --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
+    --shadow-red: 0 8px 32px rgba(200,16,46,0.20);
+    --radius: 4px;
+    --radius-lg: 12px;
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  /* PAGE SYSTEM */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ========== NAVBAR ========== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: var(--transition);
+  }
+  nav.scrolled { box-shadow: var(--shadow-md); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+  .nav-logo img { height: 44px; width: 44px; object-fit: contain; border-radius: 50%; }
+  .nav-logo-text { display: flex; flex-direction: column; }
+  .nav-logo-text strong { font-family: var(--font-display); font-size: 15px; font-weight: 700; letter-spacing: 0.5px; color: var(--black); line-height: 1.1; }
+  .nav-logo-text span { font-size: 10px; letter-spacing: 2px; color: var(--red); text-transform: uppercase; font-weight: 500; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.5px; color: var(--dark-gray); text-transform: uppercase; cursor: pointer; position: relative; transition: var(--transition); text-decoration: none; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--red); transition: var(--transition); }
+  .nav-links a:hover { color: var(--red); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { background: var(--red); color: white; padding: 10px 24px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: var(--transition); border: none; border-radius: var(--radius); }
+  .nav-cta:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: var(--shadow-red); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 24px; height: 2px; background: var(--black); transition: var(--transition); display: block; }
+  .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: white; z-index: 999; padding: 20px 5%; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: var(--shadow-lg); }
+  .mobile-menu.open { display: flex; flex-direction: column; gap: 16px; }
+  .mobile-menu a { font-size: 14px; font-weight: 500; color: var(--dark-gray); letter-spacing: 0.5px; padding: 8px 0; border-bottom: 1px solid var(--light-gray); text-transform: uppercase; cursor: pointer; text-decoration: none; }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(200,16,46,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 30% 80%, rgba(200,16,46,0.06) 0%, transparent 60%),
+      linear-gradient(135deg, #0A0A0A 0%, #1A0A0E 50%, #0A0A0A 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: 
+      linear-gradient(rgba(200,16,46,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,16,46,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 2; padding: 0 5%; max-width: 780px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(200,16,46,0.12); border: 1px solid rgba(200,16,46,0.3);
+    color: #FF6B7A; font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 7px 16px; border-radius: 50px;
+    margin-bottom: 28px; animation: fadeUp 0.8s ease 0.1s both;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--red-light); border-radius: 50%; animation: pulse 2s infinite; }
+  .hero-title {
+    font-family: var(--font-display); font-size: clamp(44px, 7vw, 88px);
+    font-weight: 600; color: white; line-height: 1.05; letter-spacing: -1px;
+    margin-bottom: 24px; animation: fadeUp 0.8s ease 0.2s both;
+  }
+  .hero-title em { color: var(--red-light); font-style: italic; }
+  .hero-sub {
+    font-size: clamp(14px, 1.8vw, 17px); color: rgba(255,255,255,0.55);
+    line-height: 1.7; max-width: 540px; margin-bottom: 44px;
+    font-weight: 300; letter-spacing: 0.3px;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.4s both; }
+  .btn-primary {
+    background: var(--red); color: white; padding: 16px 36px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    cursor: pointer; border: none; border-radius: var(--radius);
+    transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
+  }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(200,16,46,0.35); }
+  .btn-outline {
+    background: transparent; color: white; padding: 15px 36px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    cursor: pointer; border: 1.5px solid rgba(255,255,255,0.25); border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.05); }
+  .hero-stats {
+    margin-top: 64px; display: flex; gap: 48px; flex-wrap: wrap;
+    animation: fadeUp 0.8s ease 0.5s both;
+  }
+  .hero-stat h3 { font-family: var(--font-accent); font-size: 42px; color: white; letter-spacing: 2px; line-height: 1; }
+  .hero-stat p { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+  .hero-stat span { color: var(--red-light); }
+  .hero-img {
+    position: absolute; right: -5%; bottom: 0; width: 55%; max-width: 780px;
+    opacity: 0.15; pointer-events: none;
+    animation: fadeIn 1.2s ease 0.3s both;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: fadeIn 1s ease 1s both;
+  }
+  .hero-scroll span { font-size: 10px; letter-spacing: 3px; color: rgba(255,255,255,0.3); text-transform: uppercase; }
+  .scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent); animation: scrollAnim 2s ease infinite; }
+
+  /* ========== TRUST STRIP ========== */
+  .trust-strip {
+    background: var(--cream); border-bottom: 1px solid rgba(0,0,0,0.07);
+    padding: 20px 5%; display: flex; gap: 0; overflow-x: auto;
+    align-items: center; justify-content: center; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 28px; border-right: 1px solid rgba(0,0,0,0.08);
+    white-space: nowrap;
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-icon { width: 36px; height: 36px; background: rgba(200,16,46,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .trust-item strong { font-size: 13px; font-weight: 600; color: var(--black); letter-spacing: 0.3px; }
+  .trust-item span { font-size: 11px; color: var(--mid-gray); }
+
+  /* ========== SECTIONS ========== */
+  section { padding: 100px 5%; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 600; color: var(--black); line-height: 1.15; letter-spacing: -0.5px; }
+  .section-title.white { color: white; }
+  .section-sub { font-size: 16px; color: var(--mid-gray); line-height: 1.7; max-width: 560px; margin-top: 16px; font-weight: 300; }
+  .section-sub.white { color: rgba(255,255,255,0.55); }
+  .section-header { margin-bottom: 60px; }
+
+  /* ========== FEATURED CARS ========== */
+  .featured { background: var(--white); }
+  .cars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .car-card {
+    background: var(--white); border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: var(--transition); cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .car-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .car-card-img { height: 220px; overflow: hidden; position: relative; background: var(--light-gray); }
+  .car-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .car-card:hover .car-card-img img { transform: scale(1.05); }
+  .car-badge { position: absolute; top: 14px; left: 14px; background: var(--red); color: white; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 5px 12px; text-transform: uppercase; border-radius: 3px; }
+  .car-badge.used { background: var(--charcoal); }
+  .car-body { padding: 24px; }
+  .car-make { font-size: 11px; font-weight: 600; letter-spacing: 2px; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+  .car-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--black); margin-bottom: 14px; }
+  .car-specs { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+  .spec { font-size: 12px; color: var(--mid-gray); display: flex; align-items: center; gap: 5px; }
+  .spec::before { content: ''; width: 4px; height: 4px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+  .car-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid var(--light-gray); }
+  .car-price { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--black); }
+  .car-price span { font-size: 13px; color: var(--mid-gray); font-weight: 400; }
+  .car-wa-btn {
+    background: #25D366; color: white; padding: 10px 18px; font-size: 12px;
+    font-weight: 600; border: none; border-radius: var(--radius); cursor: pointer;
+    transition: var(--transition); display: flex; align-items: center; gap: 6px;
+    text-decoration: none;
+  }
+  .car-wa-btn:hover { background: #1da851; transform: translateY(-1px); }
+
+  /* ========== HOW IT WORKS ========== */
+  .how-it-works { background: var(--black); position: relative; overflow: hidden; }
+  .how-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(200,16,46,0.07) 0%, transparent 70%); }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; position: relative; }
+  .steps-grid::before { content: ''; position: absolute; top: 48px; left: 12.5%; right: 12.5%; height: 1px; background: rgba(200,16,46,0.3); }
+  .step { padding: 0 24px; text-align: center; position: relative; }
+  .step-num { width: 96px; height: 96px; margin: 0 auto 28px; background: rgba(200,16,46,0.08); border: 1.5px solid rgba(200,16,46,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+  .step-num-inner { font-family: var(--font-accent); font-size: 36px; color: var(--red-light); letter-spacing: 2px; }
+  .step-icon { position: absolute; top: -8px; right: -4px; width: 28px; height: 28px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+  .step h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: white; margin-bottom: 12px; }
+  .step p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+  /* ========== WHY CHOOSE US ========== */
+  .why-us { background: var(--cream); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .why-card { background: white; padding: 36px 32px; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.06); transition: var(--transition); }
+  .why-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: transparent; }
+  .why-icon { font-size: 32px; margin-bottom: 20px; }
+  .why-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--black); margin-bottom: 12px; }
+  .why-card p { font-size: 14px; color: var(--mid-gray); line-height: 1.7; }
+
+  /* ========== TESTIMONIALS ========== */
+  .testimonials { background: var(--white); }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .testi-card { background: var(--cream); padding: 36px; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.06); transition: var(--transition); }
+  .testi-card:hover { box-shadow: var(--shadow-md); }
+  .testi-stars { color: #F5A623; font-size: 16px; margin-bottom: 16px; letter-spacing: 3px; }
+  .testi-text { font-size: 15px; color: var(--dark-gray); line-height: 1.75; font-style: italic; margin-bottom: 24px; font-family: var(--font-display); font-weight: 400; }
+  .testi-author { display: flex; align-items: center; gap: 14px; }
+  .testi-avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .testi-info strong { font-size: 14px; font-weight: 600; color: var(--black); display: block; }
+  .testi-info span { font-size: 12px; color: var(--mid-gray); }
+
+  /* ========== CTA BANNER ========== */
+  .cta-banner { background: var(--red); padding: 80px 5%; text-align: center; position: relative; overflow: hidden; }
+  .cta-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.3) 0%, transparent 70%); }
+  .cta-banner > * { position: relative; z-index: 1; }
+  .cta-banner h2 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 52px); color: white; font-weight: 600; margin-bottom: 16px; }
+  .cta-banner p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 40px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: white; color: var(--red); padding: 16px 36px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); }
+  .btn-white:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+  .btn-outline-white { background: transparent; color: white; padding: 15px 36px; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.5); border-radius: var(--radius); cursor: pointer; transition: var(--transition); }
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* ========== INVENTORY PAGE ========== */
+  .inventory-hero { background: var(--black); padding: 140px 5% 80px; }
+  .inventory-hero h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); color: white; font-weight: 600; margin-bottom: 16px; }
+  .inventory-hero p { font-size: 16px; color: rgba(255,255,255,0.5); font-weight: 300; }
+  .inventory-body { padding: 60px 5%; background: var(--cream); }
+  .filters { background: white; padding: 24px 28px; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.07); margin-bottom: 40px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; box-shadow: var(--shadow-sm); }
+  .filter-group { display: flex; flex-direction: column; gap: 6px; }
+  .filter-group label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid-gray); }
+  .filter-group select { padding: 10px 16px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: var(--radius); font-size: 13px; font-family: var(--font-body); color: var(--black); min-width: 160px; cursor: pointer; transition: var(--transition); appearance: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' fill='none' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 12px center; padding-right: 32px; }
+  .filter-group select:focus { outline: none; border-color: var(--red); }
+  .filter-btn { background: var(--red); color: white; padding: 12px 28px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: none; border-radius: var(--radius); cursor: pointer; margin-top: 18px; transition: var(--transition); }
+  .filter-btn:hover { background: var(--red-dark); }
+  .inventory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+
+  /* ========== ABOUT PAGE ========== */
+  .about-hero { background: var(--black); padding: 140px 5% 80px; }
+  .about-hero h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); color: white; font-weight: 600; margin-bottom: 16px; }
+  .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text .section-title { font-size: clamp(28px, 3vw, 40px); }
+  .about-text p { font-size: 15px; color: var(--mid-gray); line-height: 1.8; margin-top: 20px; }
+  .offices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .office-card { background: var(--cream); padding: 24px; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.06); }
+  .office-card .flag { font-size: 28px; margin-bottom: 12px; }
+  .office-card h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--black); margin-bottom: 4px; }
+  .office-card p { font-size: 13px; color: var(--mid-gray); line-height: 1.5; }
+  .mission-strip { background: var(--black); padding: 80px 5%; }
+  .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .mission-item { text-align: center; }
+  .mission-item .mi-icon { font-size: 40px; margin-bottom: 20px; }
+  .mission-item h3 { font-family: var(--font-display); font-size: 24px; color: white; margin-bottom: 12px; }
+  .mission-item p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+  /* ========== HOW IT WORKS PAGE ========== */
+  .hiw-hero { background: var(--black); padding: 140px 5% 80px; }
+  .hiw-steps { padding: 80px 5%; }
+  .hiw-step { display: grid; grid-template-columns: 120px 1fr; gap: 48px; align-items: start; margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid var(--light-gray); }
+  .hiw-step:last-child { border-bottom: none; }
+  .hiw-num { font-family: var(--font-accent); font-size: 80px; color: rgba(200,16,46,0.12); letter-spacing: 2px; line-height: 1; }
+  .hiw-info h3 { font-family: var(--font-display); font-size: 32px; font-weight: 600; color: var(--black); margin-bottom: 16px; }
+  .hiw-info p { font-size: 15px; color: var(--mid-gray); line-height: 1.8; max-width: 640px; }
+  .hiw-details { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .hiw-tag { background: rgba(200,16,46,0.06); border: 1px solid rgba(200,16,46,0.15); color: var(--red); font-size: 12px; font-weight: 600; letter-spacing: 0.5px; padding: 7px 16px; border-radius: 50px; }
+
+  /* ========== CONTACT PAGE ========== */
+  .contact-hero { background: var(--black); padding: 140px 5% 80px; }
+  .contact-body { padding: 80px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+  .contact-info h2 { font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--black); margin-bottom: 32px; }
+  .contact-detail { display: flex; gap: 16px; margin-bottom: 28px; align-items: flex-start; }
+  .cd-icon { width: 48px; height: 48px; background: rgba(200,16,46,0.06); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .cd-text strong { font-size: 13px; font-weight: 600; color: var(--black); letter-spacing: 0.5px; display: block; margin-bottom: 4px; text-transform: uppercase; }
+  .cd-text span { font-size: 14px; color: var(--mid-gray); line-height: 1.6; }
+  .contact-form { background: var(--cream); padding: 48px; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.07); }
+  .contact-form h3 { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--black); margin-bottom: 32px; }
+  .form-group { margin-bottom: 24px; }
+  .form-group label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid-gray); display: block; margin-bottom: 8px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0,0,0,0.1);
+    border-radius: var(--radius); font-size: 14px; font-family: var(--font-body);
+    color: var(--black); background: white; transition: var(--transition);
+    appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(200,16,46,0.06); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit { width: 100%; background: var(--red); color: white; padding: 16px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); margin-top: 8px; }
+  .form-submit:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: var(--shadow-red); }
+
+  /* ========== FOOTER ========== */
+  footer { background: var(--near-black); padding: 80px 5% 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 60px; }
+  .footer-brand .nav-logo { margin-bottom: 20px; }
+  .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+  .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 10px; cursor: pointer; transition: var(--transition); text-decoration: none; }
+  .footer-col a:hover { color: white; padding-left: 4px; }
+  .footer-contact p { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 8px; line-height: 1.5; }
+  .footer-contact a { color: rgba(255,255,255,0.6) !important; text-decoration: none; }
+  .footer-contact a:hover { color: var(--red-light) !important; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 16px; }
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
+  .footer-badges { display: flex; gap: 8px; }
+  .footer-badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.35); font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 6px 12px; border-radius: 3px; }
+
+  /* ========== WHATSAPP FLOAT ========== */
+  .wa-float {
+    position: fixed; bottom: 32px; right: 32px; z-index: 9999;
+    background: #25D366; color: white; width: 60px; height: 60px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 28px; box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+    cursor: pointer; transition: var(--transition); text-decoration: none;
+    animation: waPulse 3s infinite;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+  .wa-tooltip { position: absolute; right: 70px; background: var(--black); color: white; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; padding: 8px 14px; border-radius: var(--radius); white-space: nowrap; opacity: 0; transition: var(--transition); pointer-events: none; }
+  .wa-float:hover .wa-tooltip { opacity: 1; }
+
+  /* ========== VEHICLE DETAIL ========== */
+  .vd-hero { background: var(--light-gray); padding-top: 72px; }
+  .vd-gallery { display: grid; grid-template-columns: 1fr 280px; gap: 8px; }
+  .vd-main-img { height: 480px; overflow: hidden; background: #e8e8e8; }
+  .vd-main-img img { width: 100%; height: 100%; object-fit: cover; }
+  .vd-thumbs { display: flex; flex-direction: column; gap: 8px; }
+  .vd-thumb { flex: 1; overflow: hidden; cursor: pointer; background: #e0e0e0; }
+  .vd-thumb img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+  .vd-thumb:hover img { transform: scale(1.05); opacity: 0.8; }
+  .vd-content { padding: 60px 5%; display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: start; }
+  .vd-info .make { font-size: 12px; font-weight: 600; letter-spacing: 2px; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .vd-info h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 48px); font-weight: 600; color: var(--black); margin-bottom: 24px; }
+  .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .specs-table tr { border-bottom: 1px solid var(--light-gray); }
+  .specs-table td { padding: 14px 0; font-size: 14px; }
+  .specs-table td:first-child { color: var(--mid-gray); width: 40%; }
+  .specs-table td:last-child { font-weight: 600; color: var(--black); }
+  .vd-sidebar { background: var(--cream); border: 1px solid rgba(0,0,0,0.07); border-radius: var(--radius-lg); padding: 36px; position: sticky; top: 90px; }
+  .vd-price { font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+  .vd-price-note { font-size: 13px; color: var(--mid-gray); margin-bottom: 28px; }
+  .vd-actions { display: flex; flex-direction: column; gap: 12px; }
+  .btn-reserve { background: var(--red); color: white; padding: 16px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); text-align: center; }
+  .btn-reserve:hover { background: var(--red-dark); box-shadow: var(--shadow-red); }
+  .btn-wa-full { background: #25D366; color: white; padding: 15px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
+  .btn-wa-full:hover { background: #1da851; }
+
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+  @keyframes scrollAnim { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+  @keyframes waPulse { 0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 48px rgba(37,211,102,0.6), 0 0 0 12px rgba(37,211,102,0.08); } }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .about-content { grid-template-columns: 1fr; }
+    .contact-body { grid-template-columns: 1fr; }
+    .vd-gallery { grid-template-columns: 1fr; }
+    .vd-thumbs { flex-direction: row; }
+    .vd-content { grid-template-columns: 1fr; }
+    .vd-sidebar { position: static; }
+    .mission-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .steps-grid::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero-stats { gap: 28px; }
+    .trust-item { padding: 12px 16px; }
+    section { padding: 72px 5%; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .hiw-step { grid-template-columns: 80px 1fr; gap: 24px; }
+    .hiw-num { font-size: 56px; }
+    .offices-grid { grid-template-columns: 1fr; }
+    .hero-img { display: none; }
+    .about-content, .contact-body, .vd-content { gap: 40px; }
+    .contact-form { padding: 32px 24px; }
+    .vd-main-img { height: 280px; }
+    .vd-thumbs { flex-direction: row; height: 80px; }
+    .wa-float { width: 52px; height: 52px; font-size: 24px; bottom: 24px; right: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="showPage('home')">
+    <div style="width:44px;height:44px;background:#C8102E;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;">⚙</div>
+    <div class="nav-logo-text">
+      <strong>Rohaan Mikaeel Group</strong>
+      <span>Auto Trade Expert</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('inventory')">Inventory</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('how')">How It Works</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </div>
+  <button class="nav-cta" onclick="showPage('contact')">Get a Quote</button>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');toggleMenu()">Home</a>
+  <a onclick="showPage('inventory');toggleMenu()">Inventory</a>
+  <a onclick="showPage('about');toggleMenu()">About</a>
+  <a onclick="showPage('how');toggleMenu()">How It Works</a>
+  <a onclick="showPage('contact');toggleMenu()">Contact</a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/966532877328" target="_blank" title="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat with us</span>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===================== HOME PAGE ===================== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🇺🇸 USA Registered Company · Est. 2018</div>
+      <h1 class="hero-title">Global Vehicle<br>Exporters <em>You<br>Can Trust</em></h1>
+      <p class="hero-sub">New & used cars, SUVs, and heavy machinery — sourced from the USA and shipped to Africa, Middle East, Asia, and beyond with complete peace of mind.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('inventory')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          View Stock
+        </button>
+        <button class="btn-outline" onclick="showPage('contact')">Request a Car →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><h3>2000<span>+</span></h3><p>Vehicles Exported</p></div>
+        <div class="hero-stat"><h3>40<span>+</span></h3><p>Countries Served</p></div>
+        <div class="hero-stat"><h3>8<span>yr</span></h3><p>In Business</p></div>
+        <div class="hero-stat"><h3>4</h3><p>Global Offices</p></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item"><div class="trust-icon">🇺🇸</div><div><strong>USA Registered</strong><span>McKinney, TX</span></div></div>
+    <div class="trust-item"><div class="trust-icon">🔒</div><div><strong>Secure Payments</strong><span>Wire & Verified Methods</span></div></div>
+    <div class="trust-item"><div class="trust-icon">🚢</div><div><strong>Global Shipping</strong><span>Door-to-Port Delivery</span></div></div>
+    <div class="trust-item"><div class="trust-icon">✅</div><div><strong>Verified Supplier</strong><span>Full Documentation</span></div></div>
+    <div class="trust-item"><div class="trust-icon">📋</div><div><strong>Export Certified</strong><span>Compliant with Regulations</span></div></div>
+  </div>
+
+  <!-- FEATURED CARS -->
+  <section class="featured" id="featuredCars">
+    <div class="section-header fade-in">
+      <div class="section-label">Our Inventory</div>
+      <h2 class="section-title">Featured Vehicles</h2>
+      <p class="section-sub">Hand-picked inventory of premium new and used vehicles ready for export to your country.</p>
+    </div>
+    <div class="cars-grid" id="homeCarsGrid">
+      <!-- Cars injected by JS -->
+    </div>
+    <div style="text-align:center;margin-top:48px" class="fade-in">
+      <button class="btn-primary" onclick="showPage('inventory')">View Full Inventory →</button>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="how-bg"></div>
+    <div class="section-header fade-in" style="text-align:center;max-width:600px;margin:0 auto 80px;">
+      <div class="section-label">Process</div>
+      <h2 class="section-title white">How Buying Works</h2>
+      <p class="section-sub white">A simple, transparent 4-step process designed to make international vehicle purchasing safe and stress-free.</p>
+    </div>
+    <div class="steps-grid fade-in">
+      <div class="step">
+        <div class="step-num"><span class="step-num-inner">01</span><div class="step-icon">🔍</div></div>
+        <h3>Choose Your Car</h3>
+        <p>Browse our inventory or send us your specific requirements. We source from US auctions, dealerships, and private sellers.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span class="step-num-inner">02</span><div class="step-icon">✅</div></div>
+        <h3>Confirm Availability</h3>
+        <p>We verify the vehicle condition, mileage, and provide a full inspection report and photos before you commit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span class="step-num-inner">03</span><div class="step-icon">🔒</div></div>
+        <h3>Secure Payment</h3>
+        <p>Pay via verified bank wire transfer. We provide invoices, company registration documents, and payment receipts.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span class="step-num-inner">04</span><div class="step-icon">🚢</div></div>
+        <h3>Shipping & Delivery</h3>
+        <p>We handle all export documentation, customs paperwork, and shipping logistics to your destination port.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:60px" class="fade-in">
+      <button class="btn-primary" onclick="showPage('how')">Full Process Details →</button>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <div class="section-header fade-in">
+      <div class="section-label">Why Us</div>
+      <h2 class="section-title">Built on Trust &amp; Transparency</h2>
+      <p class="section-sub">Every element of our business is designed to give international buyers complete confidence.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in"><div class="why-icon">🏛️</div><h3>Legally Registered USA Company</h3><p>Rohaan Mikaeel Group Inc. is officially registered in Texas, USA — giving you full legal protection and recourse.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">📄</div><h3>Complete Documentation</h3><p>Every vehicle comes with title, CARFAX report, export certificate, and Bill of Lading for customs clearance.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">🌍</div><h3>40+ Countries Served</h3><p>We have successfully shipped vehicles to clients across Africa, the Middle East, Asia, and the Caribbean.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">🤝</div><h3>Transparent Pricing</h3><p>No hidden fees. Our quotes include vehicle cost, freight, insurance, and export documentation — all upfront.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">📱</div><h3>WhatsApp Support</h3><p>Direct access to your dedicated agent via WhatsApp. Real-time updates throughout the entire process.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">⚡</div><h3>Fast Processing</h3><p>Vehicles shipped within 7–21 days of payment. We work with major shipping lines for reliable schedules.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header fade-in" style="text-align:center;max-width:600px;margin:0 auto 60px;">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-title">Trusted by Clients Worldwide</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"I was nervous about sending money abroad for a car, but Rohaan Mikaeel Group made me feel completely at ease. They sent me all documents, photos, and regular updates. My Land Cruiser arrived in perfect condition."</p><div class="testi-author"><div class="testi-avatar">AM</div><div class="testi-info"><strong>Ahmed Al-Mansouri</strong><span>Dubai, UAE 🇦🇪</span></div></div></div>
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"Second purchase from this company. They are simply the most professional auto exporters I've worked with. Clear communication, honest pricing, and on-time delivery to Mombasa port."</p><div class="testi-author"><div class="testi-avatar">JK</div><div class="testi-info"><strong>James Kariuki</strong><span>Nairobi, Kenya 🇰🇪</span></div></div></div>
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"Rohaan Mikaeel sent me a full CARFAX report before I paid. They also handled all the customs paperwork for Nigeria. The Camry was exactly as described. Highly recommend!"</p><div class="testi-author"><div class="testi-avatar">CO</div><div class="testi-info"><strong>Chukwuemeka Obi</strong><span>Lagos, Nigeria 🇳🇬</span></div></div></div>
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"I ordered an excavator for my construction business. The machinery was well-inspected, all documents were correct, and it cleared customs in Karachi without any issues. Excellent service."</p><div class="testi-author"><div class="testi-avatar">SK</div><div class="testi-info"><strong>Sajid Khan</strong><span>Karachi, Pakistan 🇵🇰</span></div></div></div>
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"Very honest people. I found them on WhatsApp and within 3 weeks my Lexus GX was at the port in Dar es Salaam. Every step was communicated and documented. Will use again."</p><div class="testi-author"><div class="testi-avatar">FB</div><div class="testi-info"><strong>Fatuma Bakari</strong><span>Dar es Salaam, Tanzania 🇹🇿</span></div></div></div>
+      <div class="testi-card fade-in"><div class="testi-stars">★★★★★</div><p class="testi-text">"As a dealer in Riyadh, I've imported over 20 vehicles through them. Their pricing is competitive and they understand export regulations better than anyone. True professionals."</p><div class="testi-author"><div class="testi-avatar">KA</div><div class="testi-info"><strong>Khalid Al-Rashidi</strong><span>Riyadh, Saudi Arabia 🇸🇦</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Ready to Import Your Dream Vehicle?</h2>
+    <p>Contact us today. We'll source, inspect, and ship to your door — with full documentation.</p>
+    <div class="cta-btns">
+      <button class="btn-white" onclick="showPage('contact')">Get a Free Quote</button>
+      <a class="btn-outline-white" href="https://wa.me/966532877328" target="_blank">💬 WhatsApp Us Now</a>
+    </div>
+  </div>
+
+</div><!-- END HOME -->
+
+<!-- ===================== INVENTORY PAGE ===================== -->
+<div class="page" id="page-inventory">
+  <div class="inventory-hero" style="padding-top:130px">
+    <div class="section-label">Browse</div>
+    <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,64px);color:white;font-weight:600;margin-bottom:16px">Our Inventory</h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.5);font-weight:300">Premium vehicles available for immediate export. Updated weekly.</p>
+  </div>
+  <div class="inventory-body">
+    <div class="filters">
+      <div class="filter-group"><label>Brand</label><select id="filterBrand"><option value="">All Brands</option><option>Toyota</option><option>Lexus</option><option>Honda</option><option>Ford</option><option>Chevrolet</option><option>Nissan</option><option>Mitsubishi</option><option>Komatsu</option></select></div>
+      <div class="filter-group"><label>Type</label><select id="filterType"><option value="">All Types</option><option>SUV</option><option>Sedan</option><option>Truck</option><option>Hybrid</option><option>Machinery</option></select></div>
+      <div class="filter-group"><label>Condition</label><select id="filterCond"><option value="">New & Used</option><option>New</option><option>Used</option></select></div>
+      <div class="filter-group"><label>Price Range</label><select id="filterPrice"><option value="">Any Price</option><option>Under $10,000</option><option>$10,000 – $25,000</option><option>$25,000 – $50,000</option><option>$50,000+</option></select></div>
+      <button class="filter-btn" onclick="renderInventory()">Apply Filters</button>
+    </div>
+    <div class="inventory-grid" id="inventoryGrid">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+  <div class="cta-banner">
+    <h2>Don't see what you're looking for?</h2>
+    <p>We can source any vehicle on request. Just tell us the make, model, and year.</p>
+    <div class="cta-btns"><button class="btn-white" onclick="showPage('contact')">Request a Specific Car</button></div>
+  </div>
+</div>
+
+<!-- ===================== ABOUT PAGE ===================== -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="section-label">Who We Are</div>
+    <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,64px);color:white;font-weight:600;margin-bottom:16px">About Rohaan Mikaeel<br>Group Inc.</h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.5);font-weight:300;max-width:560px">A globally trusted USA-registered vehicle export company serving clients across four continents.</p>
+  </div>
+  <section style="background:white">
+    <div class="about-content">
+      <div class="about-text fade-in">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">From McKinney, Texas<br>to the World</h2>
+        <p>Rohaan Mikaeel Group Inc. was founded with a single mission: to make international vehicle trade as simple, safe, and transparent as buying a car locally.</p>
+        <p>What began as a small operation serving clients in Pakistan and the Middle East has grown into a globally recognized auto trade firm, exporting thousands of vehicles to over 40 countries across Africa, Asia, the Gulf, and beyond.</p>
+        <p>Our team of experienced trade specialists, logistics coordinators, and customer advocates work together to ensure every client — whether buying one car or a fleet of machinery — receives the same premium, documented, worry-free service.</p>
+        <p style="color:var(--red);font-family:var(--font-display);font-size:18px;font-style:italic;margin-top:28px;">"Our reputation is built on every car we deliver. We never cut corners."</p>
+      </div>
+      <div class="fade-in">
+        <div class="section-label">Global Presence</div>
+        <h2 class="section-title" style="margin-bottom:28px;">Our Offices</h2>
+        <div class="offices-grid">
+          <div class="office-card"><div class="flag">🇺🇸</div><h4>USA HQ</h4><p>7210 Moon Chase Trail<br>McKinney, TX 75071</p></div>
+          <div class="office-card"><div class="flag">🇵🇰</div><h4>Pakistan</h4><p>Karachi Operations<br>+92 312 185 8831</p></div>
+          <div class="office-card"><div class="flag">🇸🇦</div><h4>Saudi Arabia</h4><p>Riyadh Liaison<br>+966 532 877 328</p></div>
+          <div class="office-card"><div class="flag">🇭🇰</div><h4>Hong Kong</h4><p>Asia-Pacific<br>Trade Coordination</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mission-strip">
+    <div style="text-align:center;margin-bottom:60px">
+      <div class="section-label">Our Values</div>
+      <h2 class="section-title white">What We Stand For</h2>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-item fade-in"><div class="mi-icon">🛡️</div><h3>Trust</h3><p>Every transaction is backed by legal documentation, company registration, and transparent communication from start to finish.</p></div>
+      <div class="mission-item fade-in"><div class="mi-icon">🔍</div><h3>Transparency</h3><p>No hidden costs. No surprises. We provide full quotes, inspection reports, and shipping details before any payment is made.</p></div>
+      <div class="mission-item fade-in"><div class="mi-icon">🌐</div><h3>Global Trade</h3><p>We believe quality vehicles should be accessible everywhere. Our mission is to connect global buyers with US-market vehicles at fair prices.</p></div>
+    </div>
+  </div>
+  <div class="cta-banner">
+    <h2>Ready to Start Your Import?</h2>
+    <p>Speak to a trade specialist today. We're available 7 days a week.</p>
+    <div class="cta-btns"><button class="btn-white" onclick="showPage('contact')">Contact Us</button><a class="btn-outline-white" href="https://wa.me/966532877328" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<!-- ===================== HOW IT WORKS PAGE ===================== -->
+<div class="page" id="page-how">
+  <div class="hiw-hero">
+    <div class="section-label">Process</div>
+    <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,64px);color:white;font-weight:600;margin-bottom:16px">How to Buy From Us</h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.5);font-weight:300;max-width:560px">International vehicle purchasing simplified into four transparent, secure steps.</p>
+  </div>
+  <div class="hiw-steps">
+    <div class="hiw-step fade-in">
+      <div class="hiw-num">01</div>
+      <div class="hiw-info">
+        <h3>Choose Your Vehicle</h3>
+        <p>Browse our live inventory online or send us your specific requirements via WhatsApp or email. We source from US auctions (Copart, IAAI, Manheim), franchised dealerships, and private sellers. You can specify make, model, year, color, mileage range, and budget — we'll find the best match.</p>
+        <div class="hiw-details"><span class="hiw-tag">Browse Online Inventory</span><span class="hiw-tag">WhatsApp Request</span><span class="hiw-tag">Email Inquiry</span><span class="hiw-tag">Custom Sourcing</span></div>
+      </div>
+    </div>
+    <div class="hiw-step fade-in">
+      <div class="hiw-num">02</div>
+      <div class="hiw-info">
+        <h3>Confirm Availability & Inspection</h3>
+        <p>Before any payment, we provide you with a full CARFAX vehicle history report, detailed inspection photos, and a written quote. For premium vehicles, we can arrange a third-party professional inspection. You'll know exactly what you're buying — no surprises.</p>
+        <div class="hiw-details"><span class="hiw-tag">CARFAX Report</span><span class="hiw-tag">Photo Inspection</span><span class="hiw-tag">Written Quote</span><span class="hiw-tag">3rd Party Inspection Available</span></div>
+      </div>
+    </div>
+    <div class="hiw-step fade-in">
+      <div class="hiw-num">03</div>
+      <div class="hiw-info">
+        <h3>Secure Payment</h3>
+        <p>All payments are made via verified bank wire transfer to our registered US business account. We provide an official invoice on company letterhead, our company registration certificate (EIN), and a payment confirmation receipt. Never send payment to personal accounts — only to Rohaan Mikaeel Group Inc.</p>
+        <div class="hiw-details"><span class="hiw-tag">Bank Wire Transfer</span><span class="hiw-tag">Official Invoice</span><span class="hiw-tag">Company Registration Proof</span><span class="hiw-tag">Payment Receipt</span></div>
+      </div>
+    </div>
+    <div class="hiw-step fade-in">
+      <div class="hiw-num">04</div>
+      <div class="hiw-info">
+        <h3>Shipping & Delivery</h3>
+        <p>Once payment is received, we handle all export documentation including the US Title, Export Certificate, and Bill of Lading. We work with established shipping lines to load your vehicle at US ports (Baltimore, Houston, LA) and ship to your destination port. Estimated transit time: 2–8 weeks depending on destination.</p>
+        <div class="hiw-details"><span class="hiw-tag">US Title Transfer</span><span class="hiw-tag">Export Certificate</span><span class="hiw-tag">Bill of Lading</span><span class="hiw-tag">Port-to-Port Delivery</span><span class="hiw-tag">Shipping Insurance Available</span></div>
+      </div>
+    </div>
+  </div>
+  <section style="background:var(--cream);padding:80px 5%">
+    <div class="section-header fade-in" style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked</h2>
+    </div>
+    <div style="max-width:800px;margin:0 auto">
+      <div id="faqContainer"></div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <h2>Questions? We're here to help.</h2>
+    <p>Talk to a specialist who's exported thousands of vehicles internationally.</p>
+    <div class="cta-btns"><button class="btn-white" onclick="showPage('contact')">Contact Us</button><a class="btn-outline-white" href="https://wa.me/966532877328" target="_blank">💬 WhatsApp Now</a></div>
+  </div>
+</div>
+
+<!-- ===================== CONTACT PAGE ===================== -->
+<div class="page" id="page-contact">
+  <div class="contact-hero">
+    <div class="section-label">Get In Touch</div>
+    <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,64px);color:white;font-weight:600;margin-bottom:16px">Contact Us</h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.5);font-weight:300">Available 7 days a week. We respond within 2 hours.</p>
+  </div>
+  <div class="contact-body">
+    <div class="fade-in">
+      <h2 style="font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--black);margin-bottom:32px">Let's Talk Business</h2>
+      <div class="contact-detail"><div class="cd-icon">📍</div><div class="cd-text"><strong>Head Office</strong><span>7210 Moon Chase Trail<br>McKinney, TX 75071, USA</span></div></div>
+      <div class="contact-detail"><div class="cd-icon">📞</div><div class="cd-text"><strong>Phone (Saudi Arabia)</strong><span><a href="tel:+966532877328">+966 532 877 328</a></span></div></div>
+      <div class="contact-detail"><div class="cd-icon">📞</div><div class="cd-text"><strong>Phone (Pakistan)</strong><span><a href="tel:+923121858831">+92 312 185 8831</a></span></div></div>
+      <div class="contact-detail"><div class="cd-icon">✉️</div><div class="cd-text"><strong>Email</strong><span><a href="mailto:vendors@rohaanmikaeel.com">vendors@rohaanmikaeel.com</a></span></div></div>
+      <div class="contact-detail"><div class="cd-icon">🌐</div><div class="cd-text"><strong>Website</strong><span><a href="http://www.rohaanmikaeel.com" target="_blank">www.rohaanmikaeel.com</a></span></div></div>
+      <div class="contact-detail"><div class="cd-icon">💬</div><div class="cd-text"><strong>WhatsApp</strong><span><a href="https://wa.me/966532877328" target="_blank">Chat with us on WhatsApp</a></span></div></div>
+      <div style="margin-top:40px;padding:28px;background:rgba(200,16,46,0.04);border:1px solid rgba(200,16,46,0.12);border-radius:var(--radius-lg)">
+        <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:12px">Business Hours</div>
+        <p style="font-size:14px;color:var(--mid-gray);line-height:1.8">Mon – Sat: 9:00 AM – 8:00 PM (PKT / AST)<br>Sunday: WhatsApp only<br>Emergency inquiries: 24/7 WhatsApp</p>
+      </div>
+    </div>
+    <div class="contact-form fade-in">
+      <h3>Send an Inquiry</h3>
+      <div class="form-group"><label>Full Name</label><input type="text" id="cName" placeholder="Your full name"></div>
+      <div class="form-group"><label>Country</label><input type="text" id="cCountry" placeholder="Your country"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" id="cEmail" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" id="cPhone" placeholder="+1 or country code"></div>
+      <div class="form-group"><label>Vehicle Interest</label><select id="cInterest"><option value="">Select vehicle type</option><option>New Car / SUV</option><option>Used Car / SUV</option><option>Heavy Machinery</option><option>Truck / Commercial</option><option>Hybrid / Electric</option><option>Custom Request</option></select></div>
+      <div class="form-group"><label>Message</label><textarea id="cMessage" placeholder="Tell us what you're looking for — make, model, year, budget..."></textarea></div>
+      <button class="form-submit" onclick="submitForm()">Send Inquiry →</button>
+      <p style="font-size:12px;color:var(--mid-gray);margin-top:16px;text-align:center">We respond within 2 hours. Your info is never shared.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">
+        <div style="width:44px;height:44px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;">⚙</div>
+        <div class="nav-logo-text">
+          <strong style="color:white">Rohaan Mikaeel Group</strong>
+          <span>Auto Trade Expert</span>
+        </div>
+      </div>
+      <p>USA-registered global vehicle exporters specializing in new & used cars and heavy machinery. Trusted by clients in 40+ countries.</p>
+      <div style="margin-top:24px;display:flex;gap:12px">
+        <a href="https://wa.me/966532877328" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none">💬</a>
+        <a href="mailto:vendors@rohaanmikaeel.com" style="width:36px;height:36px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none">✉️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('inventory')">Inventory</a>
+      <a onclick="showPage('about')">About Us</a>
+      <a onclick="showPage('how')">How It Works</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Vehicles</h4>
+      <a onclick="showPage('inventory')">New Cars</a>
+      <a onclick="showPage('inventory')">Used SUVs</a>
+      <a onclick="showPage('inventory')">Hybrid Vehicles</a>
+      <a onclick="showPage('inventory')">Heavy Machinery</a>
+      <a onclick="showPage('inventory')">Trucks</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p>7210 Moon Chase Trail<br>McKinney, TX 75071, USA</p>
+      <p><a href="tel:+966532877328">+966 532 877 328</a></p>
+      <p><a href="tel:+923121858831">+92 312 185 8831</a></p>
+      <p><a href="mailto:vendors@rohaanmikaeel.com">vendors@rohaanmikaeel.com</a></p>
+      <p><a href="http://www.rohaanmikaeel.com" target="_blank">www.rohaanmikaeel.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Rohaan Mikaeel Group Inc. All rights reserved. Registered in Texas, USA.</p>
+    <div class="footer-badges">
+      <span class="footer-badge">🇺🇸 USA Registered</span>
+      <span class="footer-badge">✅ Verified Exporter</span>
+      <span class="footer-badge">🌍 Global Shipping</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ========== INVENTORY DATA ==========
+const vehicles = [
+  { id:1, make:'Toyota', name:'Land Cruiser 200', year:'2021', type:'SUV', cond:'Used', engine:'4.5L Twin Turbo Diesel', trans:'Automatic', mileage:'52,000 mi', price:'$48,500', img:'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80', badge:'Used', color:'White' },
+  { id:2, make:'Lexus', name:'LX 570', year:'2022', type:'SUV', cond:'Used', engine:'5.7L V8', trans:'Automatic', mileage:'28,000 mi', price:'$72,000', img:'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80', badge:'Used', color:'Black' },
+  { id:3, make:'Toyota', name:'Camry XSE', year:'2024', type:'Sedan', cond:'New', engine:'2.5L Hybrid', trans:'CVT', mileage:'0 mi', price:'$34,000', img:'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80', badge:'New', color:'Red' },
+  { id:4, make:'Ford', name:'F-150 Raptor', year:'2023', type:'Truck', cond:'Used', engine:'3.5L EcoBoost V6', trans:'10-Speed Auto', mileage:'18,000 mi', price:'$65,000', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', badge:'Used', color:'Blue' },
+  { id:5, make:'Toyota', name:'Prado TXL', year:'2023', type:'SUV', cond:'New', engine:'4.0L V6', trans:'Automatic', mileage:'0 mi', price:'$52,000', img:'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80', badge:'New', color:'Silver' },
+  { id:6, make:'Honda', name:'CR-V Hybrid', year:'2024', type:'Hybrid', cond:'New', engine:'2.0L Hybrid', trans:'CVT', mileage:'0 mi', price:'$36,500', img:'https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&q=80', badge:'New', color:'Gray' },
+  { id:7, make:'Komatsu', name:'PC200-8 Excavator', year:'2020', type:'Machinery', cond:'Used', engine:'6D107 Diesel', trans:'Hydraulic', mileage:'4,200 hrs', price:'$95,000', img:'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80', badge:'Used', color:'Yellow' },
+  { id:8, make:'Chevrolet', name:'Tahoe LTZ', year:'2022', type:'SUV', cond:'Used', engine:'5.3L V8', trans:'10-Speed Auto', mileage:'31,000 mi', price:'$55,000', img:'https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=600&q=80', badge:'Used', color:'White' },
+  { id:9, make:'Nissan', name:'Patrol Y62', year:'2023', type:'SUV', cond:'New', engine:'5.6L V8', trans:'7-Speed Auto', mileage:'0 mi', price:'$68,000', img:'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80', badge:'New', color:'Black' },
+];
+
+function carCardHTML(v, onclick) {
+  const badgeCls = v.cond === 'New' ? '' : 'used';
+  return `<div class="car-card" onclick="${onclick}">
+    <div class="car-card-img">
+      <img src="${v.img}" alt="${v.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600'">
+      <span class="car-badge ${badgeCls}">${v.badge}</span>
+    </div>
+    <div class="car-body">
+      <div class="car-make">${v.make} · ${v.year}</div>
+      <div class="car-name">${v.name}</div>
+      <div class="car-specs">
+        <span class="spec">${v.engine}</span>
+        <span class="spec">${v.trans}</span>
+        <span class="spec">${v.mileage}</span>
+        <span class="spec">${v.type}</span>
+      </div>
+      <div class="car-footer">
+        <div class="car-price">${v.price} <span>+ shipping</span></div>
+        <a class="car-wa-btn" href="https://wa.me/966532877328?text=Hi, I'm interested in the ${encodeURIComponent(v.year+' '+v.make+' '+v.name)}" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Inquire
+        </a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderHomeCars() {
+  const grid = document.getElementById('homeCarsGrid');
+  grid.innerHTML = vehicles.slice(0,6).map(v => carCardHTML(v, `openVehicle(${v.id})`)).join('');
+}
+
+function renderInventory() {
+  const brand = document.getElementById('filterBrand').value;
+  const type = document.getElementById('filterType').value;
+  const cond = document.getElementById('filterCond').value;
+  let filtered = vehicles.filter(v => {
+    if(brand && v.make !== brand) return false;
+    if(type && v.type !== type) return false;
+    if(cond && v.cond !== cond) return false;
+    return true;
+  });
+  const grid = document.getElementById('inventoryGrid');
+  if(filtered.length === 0) { grid.innerHTML = '<p style="font-size:16px;color:var(--mid-gray);padding:40px 0">No vehicles match your filters. <a href="#" onclick="document.getElementById(\'filterBrand\').value=\'\';document.getElementById(\'filterType\').value=\'\';document.getElementById(\'filterCond\').value=\'\';renderInventory();return false;" style="color:var(--red)">Clear filters</a></p>'; return; }
+  grid.innerHTML = filtered.map(v => carCardHTML(v, `openVehicle(${v.id})`)).join('');
+}
+
+function openVehicle(id) {
+  const v = vehicles.find(x => x.id === id);
+  if(!v) return;
+  // Show home page with vehicle detail section
+  showPage('detail');
+  document.getElementById('vd-content').innerHTML = `
+    <div class="vd-gallery">
+      <div class="vd-main-img"><img src="${v.img}" alt="${v.name}" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800'"></div>
+      <div class="vd-thumbs">
+        <div class="vd-thumb"><img src="${v.img}" alt="thumb1" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400'"></div>
+        <div class="vd-thumb"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="thumb2"></div>
+        <div class="vd-thumb"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400" alt="thumb3"></div>
+      </div>
+    </div>
+    <div class="vd-content">
+      <div class="vd-info">
+        <div class="make">${v.make} · ${v.year} · ${v.type}</div>
+        <h1>${v.name}</h1>
+        <table class="specs-table">
+          <tr><td>Engine</td><td>${v.engine}</td></tr>
+          <tr><td>Transmission</td><td>${v.trans}</td></tr>
+          <tr><td>Mileage</td><td>${v.mileage}</td></tr>
+          <tr><td>Condition</td><td>${v.cond}</td></tr>
+          <tr><td>Color</td><td>${v.color}</td></tr>
+          <tr><td>Export Ready</td><td>Yes — Title Available</td></tr>
+          <tr><td>Shipping From</td><td>USA (TX / NJ / CA)</td></tr>
+          <tr><td>Estimated Transit</td><td>2–6 Weeks</td></tr>
+        </table>
+        <div style="padding:24px;background:rgba(200,16,46,0.04);border:1px solid rgba(200,16,46,0.12);border-radius:var(--radius-lg);margin-top:24px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px">Shipping Info</div>
+          <p style="font-size:14px;color:var(--mid-gray);line-height:1.7">Price shown is EXW (Ex Works) USA. We can provide FOB (Free on Board) or CIF (Cost, Insurance, Freight) quotes. Contact us for a full landed cost to your destination port.</p>
+        </div>
+      </div>
+      <div class="vd-sidebar">
+        <div style="font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:8px">Price</div>
+        <div class="vd-price">${v.price}</div>
+        <div class="vd-price-note">+ Shipping & Export Docs</div>
+        <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap">
+          <span style="background:rgba(200,16,46,0.06);border:1px solid rgba(200,16,46,0.15);color:var(--red);font-size:11px;font-weight:600;padding:5px 12px;border-radius:50px">${v.cond}</span>
+          <span style="background:rgba(200,16,46,0.06);border:1px solid rgba(200,16,46,0.15);color:var(--red);font-size:11px;font-weight:600;padding:5px 12px;border-radius:50px">${v.type}</span>
+        </div>
+        <div class="vd-actions">
+          <button class="btn-reserve" onclick="showPage('contact')">Reserve This Vehicle</button>
+          <a class="btn-wa-full" href="https://wa.me/966532877328?text=Hi, I want to inquire about the ${encodeURIComponent(v.year+' '+v.make+' '+v.name)}" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--light-gray)">
+          <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:12px">Trust Assurance</div>
+          <div style="font-size:13px;color:var(--mid-gray);line-height:1.8">✅ Full CARFAX Report<br>✅ USA Title Available<br>✅ Export Certificate<br>✅ Secure Payment<br>✅ USA Registered Company</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ========== VEHICLE DETAIL PAGE ==========
+// Create detail page dynamically
+const detailPage = document.createElement('div');
+detailPage.className = 'page';
+detailPage.id = 'page-detail';
+detailPage.innerHTML = `
+  <div style="padding-top:72px;background:var(--light-gray)">
+    <div style="padding:24px 5%;border-bottom:1px solid rgba(0,0,0,0.07);background:white;display:flex;align-items:center;gap:12px">
+      <button onclick="history.back();showPage('inventory')" style="background:none;border:none;color:var(--red);font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px">← Back to Inventory</button>
+    </div>
+    <div id="vd-content"></div>
+  </div>
+`;
+document.body.insertBefore(detailPage, document.querySelector('footer'));
+
+// ========== FAQ ==========
+const faqs = [
+  { q: 'How do I know you\'re a legitimate company?', a: 'Rohaan Mikaeel Group Inc. is a registered corporation in Texas, USA. We provide our EIN (Employer Identification Number), company registration certificate, and state incorporation documents upon request before any payment is made.' },
+  { q: 'What payment methods do you accept?', a: 'We accept bank wire transfers (SWIFT) to our official US business bank account. We never accept personal PayPal, Cash App, or informal payments. An official invoice on company letterhead is issued for every transaction.' },
+  { q: 'How long does shipping take?', a: 'Transit times vary by destination. West Africa: 2–4 weeks. East Africa: 3–5 weeks. Middle East: 2–3 weeks. South Asia: 3–5 weeks. Timelines begin once the vehicle is loaded at the US port.' },
+  { q: 'Do you provide vehicle inspection reports?', a: 'Yes. Every vehicle includes a CARFAX history report. We also provide detailed photos and, upon request, can arrange a third-party mechanical inspection from a licensed US inspector at an additional fee.' },
+  { q: 'What documents will I receive?', a: 'You will receive: US Title (original), Bill of Lading, Export Certificate, Commercial Invoice, and Packing List. These documents are sufficient to clear customs in most countries.' },
+  { q: 'Can you source a specific vehicle I want?', a: 'Absolutely. Send us the make, model, year, color, mileage range, and budget via WhatsApp or email and we will source it from US auctions or dealerships within 3–7 business days.' },
+];
+function renderFAQ() {
+  const c = document.getElementById('faqContainer');
+  if(!c) return;
+  c.innerHTML = faqs.map((f,i) => `
+    <div style="border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius-lg);margin-bottom:12px;overflow:hidden">
+      <div style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:white" onclick="toggleFAQ(${i})">
+        <strong style="font-size:15px;color:var(--black);font-family:var(--font-body)">${f.q}</strong>
+        <span id="faq-icon-${i}" style="color:var(--red);font-size:20px;transition:all 0.3s">+</span>
+      </div>
+      <div id="faq-ans-${i}" style="display:none;padding:0 24px 20px;font-size:14px;color:var(--mid-gray);line-height:1.8;background:white">${f.a}</div>
+    </div>
+  `).join('');
+}
+function toggleFAQ(i) {
+  const el = document.getElementById('faq-ans-'+i);
+  const ic = document.getElementById('faq-icon-'+i);
+  if(el.style.display === 'none') { el.style.display='block'; ic.textContent='−'; ic.style.transform='rotate(0deg)'; }
+  else { el.style.display='none'; ic.textContent='+'; }
+}
+
+// ========== PAGE NAVIGATION ==========
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const pg = document.getElementById('page-'+name);
+  if(pg) { pg.classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+  if(name === 'inventory') renderInventory();
+  if(name === 'how') setTimeout(renderFAQ, 50);
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ========== SCROLL EFFECTS ==========
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  document.querySelectorAll('.fade-in').forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('visible');
+  });
+});
+
+// ========== FORM ==========
+function submitForm() {
+  const name = document.getElementById('cName').value;
+  const country = document.getElementById('cCountry').value;
+  const email = document.getElementById('cEmail').value;
+  const phone = document.getElementById('cPhone').value;
+  const interest = document.getElementById('cInterest').value;
+  const msg = document.getElementById('cMessage').value;
+  if(!name || !email) { alert('Please fill in your name and email.'); return; }
+  const waMsg = `New Inquiry from Website%0A%0AName: ${encodeURIComponent(name)}%0ACountry: ${encodeURIComponent(country)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AInterest: ${encodeURIComponent(interest)}%0AMessage: ${encodeURIComponent(msg)}`;
+  window.open('https://wa.me/966532877328?text='+waMsg, '_blank');
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = '✅ Inquiry Sent! We\'ll contact you shortly.';
+  btn.style.background = '#25D366';
+  setTimeout(() => { btn.textContent = 'Send Inquiry →'; btn.style.background = ''; }, 4000);
+}
+
+// ========== INIT ==========
+renderHomeCars();
+setTimeout(() => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('visible');
+  });
+}, 200);
+</script>
+</body>
+</html>
